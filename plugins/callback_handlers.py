@@ -57,7 +57,7 @@ async def _music_or_video(_, cb: CallbackQuery):
     match = cb.matches[0].group
     stream_type = match(2)
     index = int(match(4))
-    user_id = match(5)
+    user_id = match(10)
     result = stream_result[chat_id][0][index]
     res = {
         "user_id": user_id,
