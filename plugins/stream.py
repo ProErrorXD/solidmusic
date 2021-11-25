@@ -38,7 +38,7 @@ async def play_(_, message: types.Message):
                 [
                     InlineKeyboardButton("⬅️", f"nextmusic|{user_id}"),
                     InlineKeyboardButton("🗑", f"close|{user_id}"),
-                    InlineKeyboardButton("➡️", f"nextmusic|{user_id}"),
+                    InlineKeyboardButton("➡️", f"next{music_or_video}"),
                 ],
             ],
         ),
@@ -65,7 +65,7 @@ async def vplay_(_, message: types.Message):
                 [
                     InlineKeyboardButton("⬅️", f"nextmusic|{user_id}"),
                     InlineKeyboardButton("🗑", f"close|{user_id}"),
-                    InlineKeyboardButton("➡️", f"nextvideo|{user_id}"),
+                    InlineKeyboardButton("➡️", f"next{music_or_video}"),
                 ],
             ]
         ),
