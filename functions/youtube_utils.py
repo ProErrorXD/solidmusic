@@ -108,7 +108,7 @@ def extract_info(chat_id: int, result: Dict[int, List]):
     for count, res in enumerate(res[0], start=1):
         title = res["title"]
         duration = res["duration"]
-        more_info = f"https://t.me/{username}?start=ytinfo_{res['yt_id']}"
+        more_info = f"https://t.me/GroupVoiceBot?start=ytinfo_{res['yt_id']}"
         result_str += f"""
 {count}.
 {gm(chat_id, 'yt_title')}: {title[:35] + '...' if len(title) >= 35 and not title.endswith(' ') else res['title']}
