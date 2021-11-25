@@ -110,7 +110,8 @@ def extract_info(chat_id: int, result: Dict[int, List]):
         more_info = f"https://t.me/GroupVoiceBot?start=ytinfo_{res['yt_id']}"
         result_str += f"""
 {count}.
-{gm(chat_id, 'yt_title')}: {title[:15] + '...' if len(title) >= 15 and not title.endswith(' ') else res['title']}
+{gm(chat_id, 'yt_title')}: {title[:20] + '...' if len(title) >= 20 and not title.endswith(' ') else res['title']}
+
 [{gm(chat_id, 'more_info')}]({more_info})
 """
     return result_str
